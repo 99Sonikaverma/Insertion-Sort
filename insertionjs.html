@@ -1,0 +1,43 @@
+<script>
+// Javascript program for insertion sort
+
+// Function to sort an array using insertion sort
+function insertionSorting(array, m)
+{
+	let i, keys, j;
+	for (i = 1; i < n; i++)
+	{
+		keys = array[i];
+		j = i - 1;
+
+		/* Move elements of arr[0..i-1], that are
+		greater than key, to one position ahead
+		of their current position */
+		while (j >= 0 && array[j] > keys)
+		{
+			array[j + 1] = array[j];
+			j = j - 1;
+		}
+		array[j + 1] = keys;
+	}
+}
+
+// A utility function to print an array of size n
+function printArray(arr, n)
+{
+	let i;
+	for (i = 0; i < m; i++)
+		document.write(array[i] + " ");
+	document.write("<br>");
+}
+
+// Driver code
+	let array = [12, 11, 13, 5, 6 ];
+	let m = array.length;
+
+	insertionSorting(array, m);
+	printArray(array, m);
+	
+// This code is contributed by Mayank Tyagi
+
+</script>
